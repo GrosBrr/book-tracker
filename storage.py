@@ -25,9 +25,9 @@ def add_book(book: Book) -> bool:
     """
     books = load_books()
     # Проверка на дубликат (closes #1)
-    #for b in books:
-     #   if b.author == book.author and b.title == book.title:
-      #      return False
+    for b in books:
+       if b.author == book.author and b.title == book.title:
+            return False
     books.append(book)
     save_books(books)
     return True
